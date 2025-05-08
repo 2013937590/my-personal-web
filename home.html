@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/modal.css">
     <script src="./js/home.js"></script>
+    <script src="./js/base.js"></script>
 </head>
 
 <body>
@@ -281,7 +282,7 @@
                             <span>02</span>
                         </h3>
                         <div class="li2-box">
-                            <a class="li2-box-item carbox" href="https://lab508.gitee.io/">
+                            <a class="li2-box-item carbox" href="https://celestial-attempt-3a4.notion.site/1edf754a171a8036aac1ff5872df66ff?pvs=4">
                                 <img src="./img/toux.jpg" alt="">
                                 <div class="boxitem-title">
                                     <h6>二手交易平台信息系统分析与设计</h6>
@@ -302,7 +303,7 @@
                                     <span>前端开发</span>
                                 </div>
                             </a>
-                            <a class="li2-box-item carbox" href="https://wttandroid.gitee.io/wttandroid.github.io/">
+                            <a class="li2-box-item carbox" href="https://github.com/2013937590/my-personal-web">
                                 <img src="./img/project/my-web.jpg" alt="">
                                 <div class="boxitem-title">
                                     <h6>基于前端三剑客开发的个人简历网站</h6>
@@ -405,39 +406,39 @@
         </div>
     </div>
     <script>
-        // 获取弹窗元素
-        const weixinModal = document.getElementById('weixinModal');
-        const qqModal = document.getElementById('qqModal');
-        const closeBtns = document.getElementsByClassName('close');
+        // // 获取弹窗元素
+        // const weixinModal = document.getElementById('weixinModal');
+        // const qqModal = document.getElementById('qqModal');
+        // const closeBtns = document.getElementsByClassName('close');
 
-        // 为微信链接添加点击事件
-        document.querySelector('a[title="wx:xy2013937590"]').addEventListener('click', function(e) {
-            e.preventDefault();
-            weixinModal.style.display = 'flex';
-        });
+        // // 为微信链接添加点击事件
+        // document.querySelector('a[title="wx:xy2013937590"]').addEventListener('click', function(e) {
+        //     e.preventDefault();
+        //     weixinModal.style.display = 'flex';
+        // });
 
-        // 为QQ链接添加点击事件
-        document.querySelector('a[title="QQ:2013937590"]').addEventListener('click', function(e) {
-            e.preventDefault();
-            qqModal.style.display = 'flex';
-        });
+        // // 为QQ链接添加点击事件
+        // document.querySelector('a[title="QQ:2013937590"]').addEventListener('click', function(e) {
+        //     e.preventDefault();
+        //     qqModal.style.display = 'flex';
+        // });
 
-        // 关闭按钮事件
-        Array.from(closeBtns).forEach(btn => {
-            btn.addEventListener('click', function() {
-                weixinModal.style.display = 'none';
-                qqModal.style.display = 'none';
-            });
-        });
+        // // 关闭按钮事件
+        // Array.from(closeBtns).forEach(btn => {
+        //     btn.addEventListener('click', function() {
+        //         weixinModal.style.display = 'none';
+        //         qqModal.style.display = 'none';
+        //     });
+        // });
 
-        // 点击弹窗外部关闭
-        window.addEventListener('click', function(e) {
-            if (e.target === weixinModal) {
-                weixinModal.style.display = 'none';
-            }
-            if (e.target === qqModal) {
-                qqModal.style.display = 'none';
-            }
-        });
+        // // 点击弹窗外部关闭
+        // window.addEventListener('click', function(e) {
+        //     if (e.target === weixinModal) {
+        //         weixinModal.style.display = 'none';
+        //     }
+        //     if (e.target === qqModal) {
+        //         qqModal.style.display = 'none';
+        //     }
+        // });
     </script>
 </body>
