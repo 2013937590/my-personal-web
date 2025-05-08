@@ -1,0 +1,393 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    caret-color: transparent;
+}
+
+:root {
+    /* 海洋风格配色 */
+    --backColor: #e6f3ff;
+    --borderline: #b3d9ff;
+    /* 卡片 */
+    --headerCOlor: #ffffff;
+    /* 卡片悬停 */
+    --headerhover: rgba(0, 102, 204, 0.8);
+
+    /* 默认字体颜色 */
+    --headerFont: #0066cc;
+    /* 反差色 */
+    --fontColor: #003366;
+    --mainColor: #0099ff;
+    --bagColor: #f0f8ff;
+}
+
+body {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: .4s ease-in-out;
+    font-weight: 400;
+    color: var(--headerFont);
+    background-color: var(--bagColor);
+    overflow-x: hidden;
+}
+
+/* 海洋背景动画 */
+.ocean-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, #1a2980, #26d0ce);
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 8s infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
+}
+
+/* 遮罩层 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    transition: color .6s ease-in-out;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--mainColor);
+}
+
+
+.carbox {
+    background-color: var(--headerCOlor);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px -2px rgb(0 0 0 / 15%);
+}
+
+nav {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav a {
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.copybottm {
+    padding: 30px 20px;
+    color: #7B7B7D;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: .4s ease-in-out;
+    text-transform: uppercase;
+}
+
+/* 顶部栏目 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 102, 204, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.header span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #003366;
+    text-shadow: 2px 2px 4px rgba(0, 102, 204, 0.1);
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.header span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0099ff, transparent);
+    opacity: 0.7;
+}
+
+.header-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header-nav a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #0066cc;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.header-nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #0099ff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.header-nav a:hover {
+    color: #0099ff;
+    transform: translateY(-2px);
+}
+
+.header-nav a:hover::before {
+    width: 80%;
+}
+
+.header-nav .active {
+    color: #003366;
+    font-weight: 600;
+    background: rgba(0, 153, 255, 0.1);
+}
+
+.header.scrolled {
+    height: 60px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 102, 204, 0.15);
+}
+
+/* 左半内容 */
+.co-left {
+    width: 25%;
+    display: inline-block;
+    height: 50px;
+}
+
+.co-right {
+    width: 75%;
+    display: inline-block;
+    min-height: 50px;
+}
+
+.content {
+    position: relative;
+    /* top: -90px; */
+    min-height: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.content .me-card {
+    width: fit-content;
+    min-width: 285px;
+    height: 700px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--headerCOlor);
+    padding: 0px 30px;
+    position: fixed !important;
+    top: 10%;
+}
+
+/* 左边吸盘 */
+.mecar-title {
+    margin-top: 40px;
+}
+
+.resume-title {
+    padding: 12px 20px;
+    margin: 24px 0;
+}
+
+/* 虚线 */
+.content .borderbotm {
+    border-bottom: 1px dashed rgb(29, 28, 28);
+    height: 0px;
+    margin: 35px 0;
+}
+
+.mecar-title .me-image {
+    position: relative;
+    display: inline-block;
+}
+
+.me-image img {
+    width: 100px;
+    height: 100px;
+    border: solid 3px #FCFCFE;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px -2px rgb(0 0 0 / 15%);
+}
+
+.mecar-title .me-image .status {
+    height: 25px;
+    width: 25px;
+    box-shadow: 0 2px 4px -2px rgb(0 0 0 / 15%);
+    border-radius: 50%;
+    position: absolute;
+    border: solid 3px #FCFCFE;
+    right: 0px;
+    bottom: 0px;
+    background-color: var(--mainColor);
+    overflow: hidden;
+    color: #fff;
+    transition: width .2s ease-in-out, visible .2s ease-in-out;
+}
+
+.mecar-title .me-image:hover .status {
+    width: 100px;
+    border-radius: 20px;
+}
+
+.mecar-title .me-image:hover .status i {
+    width: 0%;
+    visibility: hidden;
+}
+
+.mecar-title .me-image:hover .status i {
+    width: 100%;
+    visibility: visible;
+}
+
+.mecar-bottm div {
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+    line-height: 25px;
+}
+
+.mecar-bottm .mecarbottm-key {
+    font-weight: 500;
+}
+
+.mecar-bottm .mecarbottm-value {
+    font-weight: 500;
+    color: #c9c6c6;
+}
+
+.me-card .lianxi-list svg {
+    margin: 0 5px;
+
+}
+
+.me-card .lianxi-list a svg path {
+    transition: .2s ease-in-out;
+}
+
+.me-card .lianxi-list a:hover svg path {
+    fill: var(--mainColor);
+}
+
+.me-card .lianxi-list a {
+    display: inline-block;
+}
+
+.me-card .buttom-box .button {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    width: 200px;
+
+    color: var(--headerFont);
+    border-radius: 50px;
+    background: linear-gradient(-45deg, var(--mainColor) 50%, #fff 60%, var(--mainColor) 70%);
+    background-size: 600% 100%;
+    animation: shine 5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position-x: 100%;
+    }
+
+    50% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position-x: -100%;
+    }
+}
+
+.copybottm {
+    padding: 30px 20px;
+    color: #7B7B7D;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: .4s ease-in-out;
+    text-transform: uppercase;
+}
+
+.right-bottom {
+    width: 1;
+    height: 50px;
+}
