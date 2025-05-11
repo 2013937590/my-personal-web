@@ -324,55 +324,6 @@ input ,textarea {
     height: 50px;
 }
 
-.li4-box {
-    padding: 50px;
-}
-
-.li4-box input,
-.li4-box textarea {
-    display: block;
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(0, 102, 204, 0.2);
-    border-radius: 10px;
-    padding: 0 20px;
-    box-shadow: inset 0 0 4px -1px rgba(0, 102, 204, 0.1);
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-
-.li4-box input:focus,
-.li4-box textarea:focus {
-    border-color: #0099ff;
-    box-shadow: 0 0 0 2px rgba(0, 153, 255, 0.1);
-}
-
-.li4-box textarea {
-    height: 200px;
-    resize: none;
-    padding-top: 10px;
-}
-
-.li4-box button {
-    padding: 12px 35px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(45deg, #003366, #0099ff);
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.2);
-}
-
-.li4-box button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
-}
-
 .carbox {
     background-color: var(--headerCOlor);
     border-radius: 12px;

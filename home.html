@@ -31,7 +31,7 @@
                     <a href="#projects">项目</a>
                     <a href="#awards">获奖</a>
                     <a href="#others">其他</a>
-                    <a href="#link">联系</a>    
+                    <a href="#link">联系</a>
                 </nav>
             </div>
         </div>
@@ -281,23 +281,25 @@
                             <div class="borderbotm"></div>
                             <span>02</span>
                         </h3>
+                        <h4>(点击查看相关代码)</h4>
                         <div class="li2-box">
-                            <a class="li2-box-item carbox" href="https://celestial-attempt-3a4.notion.site/1edf754a171a8036aac1ff5872df66ff?pvs=4">
-                                <img src="./img/toux.jpg" alt="">
+                            <a class="li2-box-item carbox"
+                                href="https://celestial-attempt-3a4.notion.site/1edf754a171a8036aac1ff5872df66ff?pvs=4">
+                                <img src="./img/project/3.jpg" alt="">
                                 <div class="boxitem-title">
                                     <h6>二手交易平台信息系统分析与设计</h6>
                                     <span>市场调研+需求分析</span>
                                 </div>
                             </a>
-                            <a class="li2-box-item carbox" href="http://117.72.115.233:8002/front/index.html">
-                                <img src="./img/toux.jpg" alt="">
+                            <a class="li2-box-item carbox" href="https://github.com/2013937590/second_hand_back_end">
+                                <img src="./img/project/1.jpg" alt="">
                                 <div class="boxitem-title">
                                     <h6>基于SpringBoot开发的二手交易平台后端</h6>
                                     <span>后端开发</span>
                                 </div>
                             </a>
-                            <a class="li2-box-item carbox" href="https://wttandroid.gitee.io/wttandroid.github.io/">
-                                <img src="./img/toux.jpg" alt="">
+                            <a class="li2-box-item carbox" href="https://github.com/2013937590/second_hand_front_end">
+                                <img src="./img/project/2.jpg" alt="">
                                 <div class="boxitem-title">
                                     <h6>基于Vue开发的二手交易平台前端</h6>
                                     <span>前端开发</span>
@@ -333,7 +335,7 @@
                         <h3>
                             <span>其他</span>
                             <div class="borderbotm"></div>
-                            <span>05</span>
+                            <span>04</span>
                         </h3>
                         <div class="li1-box">
                             <div class="carbox">
@@ -357,7 +359,7 @@
                         <h3>
                             <span>联系我</span>
                             <div class="borderbotm"></div>
-                            <span>04</span>
+                            <span>05</span>
                         </h3>
                         <div class="li3-box">
                             <div class="li3-box-item carbox borderbefore">
@@ -376,7 +378,7 @@
                                 </svg>
                                 <p>QQ昵称: <i>Restart</i>
                                 </p>
-                                <p>QQ号: <i>2013937590</i></p>
+                                <p>QQ号: <i>2013937590 (邮箱:2013937590@qq.com)</i></p>
                             </div>
                         </div>
                     </div>
@@ -412,27 +414,27 @@
         const closeBtns = document.getElementsByClassName('close');
 
         // 为微信链接添加点击事件
-        document.querySelector('a[title="wx:xy2013937590"]').addEventListener('click', function(e) {
+        document.querySelector('a[title="wx:xy2013937590"]').addEventListener('click', function (e) {
             e.preventDefault();
             weixinModal.style.display = 'flex';
         });
 
         // 为QQ链接添加点击事件
-        document.querySelector('a[title="QQ:2013937590"]').addEventListener('click', function(e) {
+        document.querySelector('a[title="QQ:2013937590"]').addEventListener('click', function (e) {
             e.preventDefault();
             qqModal.style.display = 'flex';
         });
 
         // 关闭按钮事件
         Array.from(closeBtns).forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 weixinModal.style.display = 'none';
                 qqModal.style.display = 'none';
             });
         });
 
         // 点击弹窗外部关闭
-        window.addEventListener('click', function(e) {
+        window.addEventListener('click', function (e) {
             if (e.target === weixinModal) {
                 weixinModal.style.display = 'none';
             }
